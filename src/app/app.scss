@@ -1,0 +1,24 @@
+.fontChange {
+    font-family: 'Muli' !important;
+}
+
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+ion-navbar {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url(../assets/fonts/muli.ttf) format('ttf');
+    font-weight: 200;
+}

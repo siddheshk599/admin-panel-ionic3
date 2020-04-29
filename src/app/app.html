@@ -1,0 +1,22 @@
+<ion-menu [content]="content">
+    <ion-content class="fontChange">
+        <ion-list no-lines>
+            <div (click)="showModal()">
+            <ion-item class="fontChange" style="border-bottom: 2px; border-color: black; border-style: solid;">
+                <ion-icon>
+                    <img src="assets/svg/admin.svg" alt="Admin" style="width: 35px; height: 35px;">
+                </ion-icon>
+                <b style="font-size: 12px; margin-left: 20px;">Admin</b>
+            </ion-item>
+        </div>
+            <ion-item *ngFor="let entry of menuList; let i=index" (click)="goToPage(i)">
+                <ion-icon item-start>
+                    <img src="{{ entry.image }}" alt="{{ entry.text }}" style="width: 35px; height: 35px;">
+                </ion-icon>
+                <b style="font-size: 12px;">{{ entry.text }}</b>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

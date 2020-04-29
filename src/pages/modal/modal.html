@@ -1,0 +1,55 @@
+<div class="modal fontChange">
+    <div class="modal-body">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-10 style="font-size: 18px; text-align: center; margin-top: -2px;">
+                    <b>Admin Details</b>
+                </ion-col>
+                <ion-col col-2>
+                    <img (click)="closeModal()" src="assets/svg/close.svg" alt="Close" style="width: 20px; height: 20px; display: block; margin: auto;">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid style="font-size: 14px; margin-bottom: 20px;">
+            <b>
+            <ion-row class="ionRowMargin">
+                <ion-col col-5 class="ionColColor" style="text-align: center;"><div style="margin-top: 10px;">Date</div></ion-col>
+                <ion-col col-7 class="ionColColor">
+                    <ion-input [disabled]="!isEnabled" value="26-04-1996"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ionRowMargin" style="text-align: center;">
+                <ion-col col-5 class="ionColColor"><div style="margin-top: 10px;">Assigned To</div></ion-col>
+                <ion-col col-7 class="ionColColor">
+                    <ion-input type="text" [disabled]="!isEnabled" value="Jyoti Vishwakarma"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ionRowMargin" style="text-align: center;">
+                <ion-col col-5 class="ionColColor"><div style="margin-top: 10px;">Assigned By</div></ion-col>
+                <ion-col col-7 class="ionColColor">
+                    <ion-input type="text" [disabled]="!isEnabled" value="Shraddha Jadhav"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ionRowMargin" style="text-align: center;">
+                <ion-col col-5 class="ionColColor"><div style="margin-top: 10px;">Credit Points</div></ion-col>
+                <ion-col col-7 class="ionColColor">
+                    <ion-input type="text" [disabled]="!isEnabled" value="1000"></ion-input>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ionRowMargin" style="text-align: center;">
+                <ion-col col-5 class="ionColColor"><div style="margin-top: 10px;">Cr./Dr.</div></ion-col>
+                <ion-col col-7 class="ionColColor">
+                    <ion-input type="text" [disabled]="!isEnabled" value="Credit"></ion-input>
+                </ion-col>
+            </ion-row>
+            </b>
+        </ion-grid>
+
+        <div style="font-size: 16px; width: 250px; margin-left: auto; margin-right: auto;">
+            <button (click)="allowEdit()" style="background-color: #B33536; width: 100px; height: 35px; margin-right: 5px; color: white;"><b>Edit</b></button>
+            <button style="width: 100px; height: 35px; background-color: lightslategray; color: white;"><b>Delete</b></button>
+        </div>
+    </div>
+</div>
+<div class="modal-background"></div>

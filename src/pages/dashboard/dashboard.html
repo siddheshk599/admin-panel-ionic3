@@ -1,0 +1,44 @@
+<ion-header>
+  
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <img src="assets/svg/menu.svg" alt="Menu" style="width: 35px; height: 35px; padding-top: 5px;">
+      </button>
+    </ion-buttons>
+    <ion-title class="fontChange"><b style="font-size: 18px;">Dashboard</b></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <img src="assets/svg/notification.svg" alt="Bell" style="width: 35px; height: 35px; padding-top: 5px;">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content padding class="fontChange" style="margin-bottom: 20px;">
+  <ion-grid>
+    <ion-row style="font-size: 12px; border-radius: 15px; height: 55px;" class="w3-border w3-card-4">
+      <ion-col col-1>
+        <ion-icon name="md-search" style="margin-left: 10px; margin-top: 15px;"></ion-icon>
+      </ion-col>
+      <ion-col col-11>
+        <ion-input placeholder="Search for gift cards" type="text" style="text-align: left;">
+        </ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid style="margin-bottom: 50px; margin-left: auto; margin-right: auto;">
+    <ion-row>
+      <ion-col col-4 *ngFor="let grid of gridList; let i = index">
+        <div style="border-radius: 10px; height: 90%;" class="w3-card-4" (click)="getPageTitle(i)">
+          <img class="w3-image" style="display: block; margin-top: 20px; margin-bottom: 20px; margin-left: auto; margin-right: auto; padding-top: 20px; width: 65px; height: 65px;" src="{{ grid.image }}" alt="{{ grid.text }}">
+          <p style="font-size: 13px; text-align: center; margin: auto; padding: 10px;">
+            <b>{{ grid.text }}</b>
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

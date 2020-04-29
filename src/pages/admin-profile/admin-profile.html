@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only menuToggle>
+        <img src="assets/svg/menu.svg" alt="Menu" style="width: 35px; height: 35px; padding-top: 5px;">
+      </button>
+    </ion-buttons>
+    <ion-title class="fontChange"><b style="font-size: 18px;">Admin Profile</b></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <img src="assets/svg/notification.svg" alt="Bell" style="width: 35px; height: 35px; padding-top: 5px;">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content padding class="fontChange">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row style="font-size: 12px; border-radius: 15px; height: 55px;" class="w3-border w3-card-4">
+            <ion-col col-1>
+              <ion-icon name="md-search" style="margin-top: 15px; margin-left: 10px;"></ion-icon>
+            </ion-col>
+            <ion-col col-11>
+              <ion-input placeholder="Search for gift cards" type="text" style="text-align: left;">
+              </ion-input>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col col-2>
+        <ion-icon>
+          <img src="assets/svg/add.svg" alt="Add" style="width: 40px; height: 40px; margin-top: 15px;">
+        </ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <table style="font-size: 12px; table-layout: fixed; width: 100%; margin-top: 10px;">
+    <tr style="text-align: center;">
+      <td style="width: 22%; font-size: 12px;">Filter</td>
+      <td style="font-size: 12px; width: 25%;">
+          Sort
+            <img src="assets/svg/sort-az.svg" alt="Sort-AZ" style="width: 16px; height: 16px;">
+      </td>
+      <td style="font-size: 12px; width: 25%;">
+        Sort
+          <img src="assets/svg/sort-za.svg" alt="Sort-ZA" style="width: 16px; height: 16px;">
+    </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr style="text-align: center;  background-color: lightgrey;">
+      <th>Assigned To</th>
+      <th>Assigned By</th>
+      <th>Credit Points</th>
+      <th>Cr./Dr.</th>
+      <th>Action</th>
+    </tr>
+    <tr style="font-size: 12px; text-align: center; word-wrap: normal; color: grey;" *ngFor="let data of tableData">
+      <td><b>{{ data.asgnTo }}</b></td>
+      <td><b>{{ data.asgnBy }}</b></td>
+      <td><b>{{ data.creditPoints }}</b></td>
+      <td><b>{{ data.option }}</b></td>
+      <td><img style="width: 14px; height: 14px; display: block; margin: auto;" src="{{ data.viewImage }}" alt="View"></td>
+    </tr>
+  </table>
+
+</ion-content>
